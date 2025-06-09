@@ -42,6 +42,8 @@ venv\\Scripts\\activate  # Windows
 
 # Install dependencies
 pip install -r requirements.txt
+
+Kaggle dataset link : https://www.kaggle.com/datasets/burakhanaltay99/image-burakhan
 ```
 
 ## Usage
