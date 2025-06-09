@@ -1,0 +1,88 @@
+Submit the followings:
+
+Source Code – You may include a link to your dataset via GitHub or another repository.
+
+Project Report – Ensure it includes the checklist we provided. 
+
+Video Presentation – Required only if you did not select a live presentation slot.
+
+Template for project report may be:
+
+1. Cover Page
+
+Project Title
+
+Group Member Names and Student IDs
+
+Date of Submission
+
+2. Abstract
+
+Briefly summarize the objective, methodology, dataset used, and key results (150–250 words).
+
+3. Introduction
+
+Background and motivation
+
+Problem statement
+
+Objectives of the project
+
+Relevance to ANN concepts
+
+4. Literature Review / Related Work
+
+Summary of previous work relevant to your problem
+
+Existing approaches, models, or datasets
+
+Key insights that influenced your approach
+
+5. Dataset Description
+
+Source of the dataset
+
+Key features and attributes
+
+Preprocessing steps (e.g., normalization, encoding, handling missing values)
+
+Train-test split method
+
+6. Methodology
+
+ANN architecture
+
+Hyperparameters (e.g., learning rate, epochs, batch size)
+
+Frameworks/libraries used (e.g., TensorFlow, PyTorch, Keras)
+
+Training and validation strategy
+
+7. Results and Evaluation
+
+Performance metrics (e.g., accuracy, precision, recall, F1-score, MSE)
+
+Training and validation curves
+
+Confusion matrix or other relevant visualizations
+
+Comparison with baseline models if applicable
+
+8. Discussion
+
+Interpretation of results
+
+Challenges faced and how they were addressed
+
+Model strengths and limitations
+
+Potential improvements
+
+9. Conclusion
+
+Summary of findings
+
+Contributions
+
+Future work suggestions
+

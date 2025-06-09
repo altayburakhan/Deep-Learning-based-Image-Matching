@@ -1,0 +1,61 @@
+Project Proposal: Deep Learning-based Image Matching for Augmented Reality Applications
+1. Problem Statement & Motivation
+Augmented Reality (AR) applications require robust and real-time image matching to align virtual objects with physical environments. Traditional feature-matching algorithms (e.g., SIFT, ORB) often fail under varying lighting, occlusion, and perspective changes. Recent advances in deep learning have shown promise in handling such complexities. This project aims to leverage Artificial Neural Networks (ANNs), specifically CNN-based models, to improve image correspondence and matching accuracy in dynamic AR scenarios.
+2. Objectives & Research Questions
+•	Achieve ≥95% matching accuracy on benchmark image pairs with challenging transformations.
+•	Reduce matching inference time by 30% compared to SIFT-based methods.
+•	Key Research Questions:
+o	Can CNNs learn more robust and generalizable feature descriptors than handcrafted methods?
+o	What architecture modifications yield optimal performance for AR-specific datasets?
+3. Literature Review / Related Work
+•	Key papers:
+o	SuperGlue (Sarlin et al., 2020)
+o	D2-Net (Dusmanu et al., 2019)
+•	State of the art: Learned matching with attention mechanisms (Transformers).
+•	Your contribution: Combining SuperGlue with lightweight backbones for mobile AR; adapting to real-world mobile camera noise.
+4. Dataset & Data Preparation
+•	Datasets:
+o	Google Landmark Dataset v2
+o	Kaggle’s Image Matching Challenge dataset
+•	Size: 100K+ image pairs.
+•	Preprocessing:
+o	Rescaling to 256x256.
+o	Contrast normalization, random occlusion augmentation.
+o	Train/val/test split: 70/15/15.
+•	Ethics: Open-source datasets with no personal or identifiable data.
+5. Model Architecture
+•	Type: Convolutional Neural Network (CNN) with keypoint detection and descriptor generation.
+•	Architecture: Feature extractor (ResNet18) → Keypoint head → Descriptor head → Matching module (SuperGlue).
+•	Activations: ReLU; Loss: Contrastive Loss + Geometric verification penalty.
+•	Regularization: Dropout (0.3), BatchNorm.
+•	Justification: Lightweight CNN ensures mobile deployment; attention-based matcher improves context sensitivity.
+6. Training Strategy
+•	Optimizer: AdamW with learning rate = 1e-4.
+•	Schedule: ReduceLROnPlateau.
+•	Batch size: 32; Epochs: 50.
+•	Hardware: NVIDIA RTX 3060; Expected training time: ~8 hours.
+•	Hyperparameter Tuning: Grid search on learning rate, dropout, and descriptor size.
+7. Evaluation Metrics & Baselines
+•	Metrics:
+o	Accuracy (correct matches / total).
+o	Average Matching Score (AMS).
+o	Runtime (ms/frame).
+•	Baselines:
+o	SIFT + RANSAC (OpenCV).
+o	D2-Net, SuperPoint.
+•	Comparison: Using homography estimation and precision-recall curves.
+8. Expected Contributions
+•	A hybrid deep learning model optimized for real-time AR performance.
+•	Codebase and pretrained weights for academic/industry use.
+•	Evaluation on real-world mobile scenarios (not just benchmarks).
+9. Implementation Plan & Timeline
+Milestone	Week
+Dataset collection & cleaning	1-2
+Prototype model training	3-4
+Architecture tuning & eval	5-6
+Real-world deployment test	7
+Final evaluation + write-up	8
+10. References & Appendices
+•	Dusmanu, M. et al. “D2-Net: A Trainable CNN for Joint Detection and Description of Local Features.” CVPR 2019.
+•	Sarlin, P. et al. “SuperGlue: Learning Feature Matching with Graph Neural Networks.” CVPR 2020.
+•	Kaggle Image Matching Challenge 2025 Dataset.
